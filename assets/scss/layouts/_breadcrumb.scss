@@ -1,0 +1,48 @@
+.custom-breadcrumb {
+  nav {
+      padding: rem(5) 0;
+
+    .breadcrumb {
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+      border-radius: 0;
+      font-family: $space;
+
+      li {
+        
+        padding-right: rem(9);
+        padding-bottom: rem(5);
+        color: $orange;
+
+ 
+
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          content: "\e905";
+          font-family: pingday;
+          padding-left: rem(5);
+          color: transparentize($color: $text, $amount: 0.5);
+          font-size: rem(10);
+        }
+
+        &+li {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+
+        a {
+          color: transparentize($color: $text, $amount: 0.5);
+        }
+      }
+    }
+  }
+}

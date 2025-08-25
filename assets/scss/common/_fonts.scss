@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'pingday';
+  src:  url('../fonts/pingday.eot?qm744y');
+  src:  url('../fonts/pingday.eot?qm744y#iefix') format('embedded-opentype'),
+    url('../fonts/pingday.ttf?qm744y') format('truetype'),
+    url('../fonts/pingday.woff?qm744y') format('woff'),
+    url('../fonts/pingday.svg?qm744y#pingday') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pingday' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-fb:before {
+  content: "\e902";
+}
+.icon-insta:before {
+  content: "\e903";
+}
+.icon-left-arrow:before {
+  content: "\e904";
+}
+.icon-right-arrow:before {
+  content: "\e905";
+}
+.icon-down-arrow:before {
+  content: "\e906";
+}
+.icon-up-arrow:before {
+  content: "\e907";
+}
+.icon-arrow-mont:before {
+  content: "\e908";
+}
+.icon-arrow:before {
+  content: "\e909";
+}
+.icon-tickmark:before {
+  content: "\e90a";
+}
+
+
+
+.font-90 {
+  font-size: rem(90);
+  line-height: rem(100);
+
+  @media (max-width: 1199px) {
+    font-size: rem(70);
+    line-height: rem(80);
+  }
+
+  @media (max-width: 991px) {
+    font-size: rem(52);
+    line-height: rem(62);
+  }
+
+  @media (max-width: 767px) {
+    font-size: rem(32);
+    line-height: rem(42);
+  }
+}
+
+.font-66 {
+  font-size: rem(66);
+  line-height: rem(74);
+
+  @media (max-width: 1199px) {
+    font-size: rem(55);
+    line-height: rem(63);
+  }
+
+  @media (max-width: 991px) {
+    font-size: rem(48);
+    line-height: rem(56);
+  }
+
+  @media (max-width: 767px) {
+    font-size: rem(40);
+    line-height: rem(48);
+  }
+}
+
+
+.heading1 {
+  font-size: rem(54);
+  line-height: rem(62);
+
+  @media (max-width: 1199px) {
+    font-size: rem(48);
+    line-height: rem(56);
+  }
+
+  @media (max-width: 991px) {
+    font-size: rem(42);
+    line-height: rem(50);
+  }
+
+  @media (max-width: 767px) {
+    font-size: rem(36);
+    line-height: rem(44);
+  }
+}
+
+.heading2 {
+  font-size: rem(48);
+  line-height: rem(56);
+
+  @media (max-width: 1199px) {
+    font-size: rem(42);
+    line-height: rem(50);
+  }
+
+  @media (max-width: 991px) {
+    font-size: rem(36);
+    line-height: rem(44);
+  }
+
+  @media (max-width: 767px) {
+    font-size: rem(30);
+    line-height: rem(38);
+  }
+}
+
+.heading3 {
+  font-size: rem(40);
+  line-height: rem(48);
+
+  @media (max-width: 1199px) {
+    font-size: rem(34);
+    line-height: rem(42);
+  }
+
+  @media (max-width: 991px) {
+    font-size: rem(27);
+    line-height: rem(35);
+  }
+
+  @media (max-width: 767px) {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+}
+
+.heading4 {
+  font-size: rem(30);
+  line-height: rem(38);
+
+  @media (max-width: 1199px) {
+    font-size: rem(23);
+    line-height: rem(30);
+  }
+
+
+  @media (max-width: 767px) {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+}
+
+.heading5 {
+  font-size: rem(24);
+  line-height: rem(32);
+
+  @media (max-width: 1199px) {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+
+  @media (max-width: 767px) {
+    font-size: rem(15);
+    line-height: rem(22);
+  }
+}
+
+.heading6 {
+  font-size: rem(18);
+  line-height: rem(26);
+
+  @media (max-width: 1199px) {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+
+
+  @media (max-width: 767px) {
+    font-size: rem(14);
+    line-height: rem(22);
+  }
+
+}
+
+.font-16 {
+  font-size: rem(16);
+  line-height: rem(24);
+
+
+
+  @media (max-width: 767px) {
+    font-size: rem(13);
+    line-height: rem(18);
+  }
+}
+
+.font-14 {
+  font-size: rem(14);
+  line-height: rem(22);
+
+  @media (max-width: 767px) {
+    font-size: rem(12);
+    line-height: rem(16);
+  }
+}

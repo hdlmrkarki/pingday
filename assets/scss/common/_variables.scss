@@ -1,0 +1,54 @@
+//Row Gutters
+$grid-gutter-width: 15px;
+
+// Theme ../font family variables
+
+$mont: "Montserrat", sans-serif;
+$space: "Space Grotesk", sans-serif;
+
+
+
+// Theme ../Color variables
+
+$white: #ffffff;
+$white1: #F5F0EA;
+$black: #000000;
+$black1: #1C1F29;
+
+
+$text: #41286E;
+
+
+$blue: #3CB4BE;
+$orange: #F37137;
+$purple: #41286E;
+
+
+
+
+
+$colors: (
+  color-white: $white,
+  color-white1: $white1,
+  color-black: $black,
+  color-black1: $black1,
+
+  color-text: $text,
+
+  color-blue: $blue,
+  color-orange: $orange,
+  color-purple: $purple,
+
+
+
+
+);
+
+.text {
+  @include create-color-classes;
+}
+
+.background {
+  @include create-color-classes("background");
+}
+

@@ -1,0 +1,21 @@
+.contact-text-container {
+    @media (min-width: 992px) {
+        margin-top: rem(50);
+    }
+}
+
+.contact-form-block {
+    padding: 60px 60px 90px;
+
+    @media (max-width: 1199px) {
+        padding: 50px 50px 80px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 40px 40px 60px;
+    }
+
+    @media (max-width: 767px) {
+        padding:25px 25px 40px;
+    }
+}

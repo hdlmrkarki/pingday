@@ -1,0 +1,116 @@
+.boxed-content {
+    padding: rem(50) rem(120);
+    position: relative;
+
+    @media (max-width: 767px) {
+        padding: rem(40);
+    }
+
+    * {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        left: 50%;
+        top: 0;
+        background-color: inherit;
+        opacity: .4;
+    }
+
+    &.shadow-left {
+        &:after {
+            left: auto;
+            right: 50%;
+        }
+    }
+}
+
+.number-text-block {
+    .single-block {
+        display: inline-flex;
+        gap: rem(50);
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+
+        @media (max-width: 767px) {
+            gap: rem(20);
+        }
+
+        .boxed-content {
+            white-space: nowrap;
+            @extend .font-90;
+            font-family: $space;
+
+             @media (max-width: 1199px) {
+                padding: rem(40) rem(100);
+            }
+
+             @media (max-width: 991px) {
+                padding: rem(30) rem(50);
+            }
+
+            @media (max-width: 767px) {
+                padding: rem(25);
+            }
+
+            span {
+                white-space: nowrap;
+            }
+        }
+
+        .text-content {
+            max-width: 310px;
+            position: relative;
+            z-index: 1;
+
+            @for $i from 1 through 6 {
+                h#{$i} {
+                    margin-bottom: 0;
+                    text-align: right;
+
+                    @media (max-width: 767px) {
+                        font-size: rem(16);
+                        line-height: rem(20);
+                    }
+                }
+            }
+        }
+
+        &.on-left {
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            width: auto;
+
+            .text-content {
+
+                @for $i from 1 through 6 {
+                    h#{$i} {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &+.single-block {
+            margin-top: rem(80);
+
+            @media (max-width: 991px) {
+                margin-top: rem(55);
+            }
+        }
+    }
+}
+
+.steps-boxed-block {
+    .single-step {
+        & + .single-step {
+            margin-top: rem(20);
+        }
+    }
+}

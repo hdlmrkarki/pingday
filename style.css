@@ -1,0 +1,20 @@
+/*!
+Theme Name: Pingday HDLTheme
+Theme URI: https://hbgdesignlab.se/
+Author: Hbgdesignlab
+Author URI: https://hbgdesignlab.se/
+Description: A modern, lightweight, and fast WordPress theme built for performance and flexibility. It features full Gutenberg compatibility with custom blocks, a powerful visual editor experience, and is fully ACF-friendly for advanced customization. Designed for custom layouts and unique designs, this theme is responsive, translation-ready, and perfect for developers and designers looking for complete creative control.
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: hdltheme
+Tags: custom-background, custom-logo, custom-menu, featured-images, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+*/
+img[sizes="auto"],
+img[sizes^="auto,"] {
+    contain-intrinsic-size: initial !important;
+}

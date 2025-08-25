@@ -1,0 +1,180 @@
+.gform_wrapper.gravity-theme {
+    margin-top: rem(20);
+
+    .gform_fields {
+        grid-row-gap: rem(24) !important;
+    }
+
+
+    input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+    .gfield select {
+        height: rem(44);
+        border: 0;
+        border-radius: 8px;
+        font-size: rem(16) !important;
+        line-height: rem(24) !important;
+        padding: rem(10) rem(20);
+        background: $white;
+        color: $text;
+        font-weight: 600;
+        box-shadow: none !important;
+
+        &::-ms-input-placeholder {
+            /* Edge 12-18 */
+            color: transparentize($color: $text, $amount: 0.4);
+        }
+
+        &::placeholder {
+            color: transparentize($color: $text, $amount: 0.4);
+
+        }
+
+        @media (max-width: 991px) {
+            font-size: rem(14) !important;
+            line-height: rem(18) !important;
+            height: rem(42);
+        }
+    }
+
+
+
+    textarea {
+        border: 0;
+        border-radius: 8px;
+        font-size: rem(16) !important;
+        line-height: rem(24) !important;
+        padding: rem(10) rem(20) !important;
+        background: $white;
+        color: $text;
+        font-weight: 600;
+
+        box-shadow: none !important;
+        height: rem(180) !important;
+        min-block-size: auto !important;
+
+        &::-ms-input-placeholder {
+            /* Edge 12-18 */
+            color: transparentize($color: $text, $amount: 0.4);
+        }
+
+        &::placeholder {
+            color: transparentize($color: $text, $amount: 0.4);
+
+        }
+
+        @media (max-width: 991px) {
+            font-size: rem(14) !important;
+            line-height: rem(18) !important;
+            height: rem(160) !important;
+        }
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+    }
+
+    p.gform_required_legend {
+        margin-bottom: rem(5);
+    }
+
+    .gform_footer {
+        margin-top: rem(20) !important;
+    }
+
+    .gform_validation_errors {
+        display: none;
+    }
+
+    .gfield_description {
+        font-size: rem(16);
+        line-height: rem(20);
+        font-weight: 400;
+
+        border: 0;
+        background: transparent;
+        padding: 0;
+    }
+
+    .ginput_container_consent {
+        input {
+            display: none
+        }
+
+        label.gfield_consent_label {
+            margin: 0;
+            position: relative;
+            padding-left: rem(32);
+            font-weight: 400;
+
+            cursor: pointer;
+            font-size: rem(18);
+            line-height: rem(24);
+
+            @media (max-width: 991px) {
+                font-size: rem(14);
+                line-height: rem(20);
+            }
+
+
+            &::before {
+                width: rem(20);
+                height: rem(20);
+                background-color: $white;
+                border: $text solid 1px;
+                border-radius: 50%;
+                top: rem(4);
+                content: '';
+                position: absolute;
+                left: 0;
+
+                @media (max-width: 991px) {
+                    top: rem(1);
+                }
+            }
+
+            &::after {
+                width: rem(12);
+                height: rem(12);
+                background-color: $green;
+                border-radius: 50%;
+                top: rem(8);
+                content: '';
+                position: absolute;
+                left: rem(4);
+                opacity: 0;
+                @extend .transition;
+
+                @media (max-width: 991px) {
+                    top: rem(5);
+                }
+            }
+        }
+
+        input:checked~label.gfield_consent_label::after {
+            opacity: 1;
+        }
+    }
+
+    div.validation_error,
+    li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+        display: none;
+    }
+
+    li.gfield.gfield_error,
+    li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+        background-color: transparent;
+        border-top: none;
+        border-bottom: none;
+        padding-top: 0;
+    }
+
+    li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+    li.gfield_error textarea {
+        border: 1px solid #ff0000 !important;
+    }
+
+    .gfield_required {
+        color: #ff0000;
+    }
+}

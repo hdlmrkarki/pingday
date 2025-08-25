@@ -1,0 +1,212 @@
+$grid-columns:      12;
+
+$screen-sm-min : 768px;
+$screen-md-min : 992px;
+$screen-lg-min : 1200px;
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin border-radius($border_radius...) {
+  -moz-border-radius: $border_radius;
+  -o-border-radius: $border_radius;
+  -webkit-border-radius: $border_radius;
+  border-radius: $border_radius;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin transform-origin ($origin) {
+  -moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+}
+
+@mixin make-grid-offset-right($class) {
+  @for $index from 0 through $grid-columns {
+    .offset-#{$class}-right-#{$index} {
+      margin-right: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+@include make-grid-offset-right(xs);
+
+@media (min-width: $sm) {
+  @include make-grid-offset-right(sm);
+}
+
+@media (min-width: $md) {
+  @include make-grid-offset-right(md);
+}
+
+@media (min-width: $lg) {
+  @include make-grid-offset-right(lg);
+}
+
+@media (min-width: $xl) {
+  @include make-grid-offset-right(xl);
+}
+
+@function rem($pixels, $context: 0.0625) {
+  @return #{$pixels*$context}rem;
+}
+
+@mixin getMarginPadding($className, $styleName) {
+  $step    : 5;
+  $max     : 600;
+  $from    : ceil(1 /$step);
+  $through : ceil($max /$step);
+  $unit: 'rem';
+
+  @for $i from $from through $through {
+    $i: $i * $step;
+
+    #{$className + $i} {
+      #{$styleName}: #{($i * 0.0625) + $unit};
+    }
+
+    @if ($i >= 40) {
+      @media (max-width: rem(1199)) {
+        #{$className + $i} {
+          #{$styleName}: #{($i * 0.0625)/1.5 + $unit};
+        }
+      }
+
+      @media (max-width: rem(991)) {
+        #{$className + $i} {
+          #{$styleName}: #{($i * 0.0625)/2 + $unit};
+        }
+      }
+    }
+  }
+}
+
+// @mixin getNegativeMargin($className, $styleName) {
+//   $step    : 5;
+//   $max     : 600;
+//   $from    : ceil(1 /$step);
+//   $through : ceil($max /$step);
+//   $unit: 'rem';
+
+//   @for $i from $from through $through {
+//     $i: $i * $step;
+
+//     #{$className + $i} {
+//       #{$styleName}: #{-($i * 0.0625) + $unit};
+//     }
+
+//     @if ($i >= 35) {
+//       @media (max-width: rem(1199)) {
+//         #{$className + $i} {
+//           #{$styleName}: #{-($i * 0.0625)/1.5 + $unit};
+//         }
+//       }
+
+//       @media (max-width: rem(991)) {
+//         #{$className + $i} {
+//           #{$styleName}: #{-($i * 0.0625)/2 + $unit};
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+@mixin themeMode($themes) {
+  @each $theme, $map in $themes {
+	.theme-#{$theme} & {
+	  $theme-map: () !global;
+	  @each $key, $submap in $map {
+		$value: map-get(map-get($themes, $theme), '#{$key}');
+		$theme-map: map-merge($theme-map, ($key: $value)) !global;
+	  }
+	  @content;
+	  $theme-map: null !global;
+	}
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+
+@each $grid-breakpoint, $grid-gutter-width in $grid-gutter-widths {
+  @include media-breakpoint-up($grid-breakpoint) {
+    $grid-gutter-half-width: $grid-gutter-width / 2;
+    .row:not(.no-gutters) {
+      margin-right: -$grid-gutter-half-width;
+      margin-left: -$grid-gutter-half-width;
+    }
+    .row:not(.no-gutters) > .col,
+    .row:not(.no-gutters) > [class*="col-"] {
+      padding-right: $grid-gutter-half-width;
+      padding-left: $grid-gutter-half-width;
+    }
+  }
+}
+
+// @mixin make-max-widths-container-width($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+//   @each $breakpoint, $container-max-width in $max-widths {
+//     @include media-breakpoint-up($breakpoint, $breakpoints) {
+//         max-width: $container-max-width;
+//     }
+//   }
+// }
+// .container{
+//    @include make-max-widths-container-width();
+// }
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin create-color-classes($attribute: 'color', $prefix: '-') {
+  @each $name, $hex in $colors {
+    &#{$prefix}#{$name} {
+      #{$attribute}: $hex ;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.link-box-wrapper {
+    .single-box {
+        position: relative;
+        padding-top: 56.25%;
+        @extend .transition;
+
+        .text-content {
+            padding: rem(20);
+            @extend .pos-abs;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                @extend .heading6;
+                font-family: $space;
+            }
+        }
+    }
+}

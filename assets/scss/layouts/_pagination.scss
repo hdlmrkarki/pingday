@@ -1,0 +1,49 @@
+.nav-pages {
+    @extend .list-unstyled;
+
+    li {
+        display: inline-flex;
+        width: rem(44);
+        height: rem(44);
+        border-radius: 50%;
+        color: $orange;
+        align-items: center;
+        justify-content: center;
+
+        &.li-nav-arrows {
+            a {
+                line-height: 0;
+            }
+
+            @media (min-width: 768px) {
+                &:first-child {
+                    margin-right: rem(25);
+                }
+
+                &:last-child {
+                    margin-left: rem(25);
+                }
+            }
+        }
+
+        &:hover {
+            background: transparentize($color: $blue, $amount: 0.6)
+        }
+
+        &.active {
+            background: $blue;
+            color: $white;
+        }
+
+
+        a {
+            @extend .font-16;
+            font-weight: 700;
+            color: inherit;
+        }
+
+        &+li {
+            margin-top: 0;
+        }
+    }
+}

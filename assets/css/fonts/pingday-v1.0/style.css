@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'pingday';
+  src:  url('fonts/pingday.eot?fiw7x');
+  src:  url('fonts/pingday.eot?fiw7x#iefix') format('embedded-opentype'),
+    url('fonts/pingday.ttf?fiw7x') format('truetype'),
+    url('fonts/pingday.woff?fiw7x') format('woff'),
+    url('fonts/pingday.svg?fiw7x#pingday') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pingday' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-fb:before {
+  content: "\e902";
+}
+.icon-insta:before {
+  content: "\e903";
+}
+.icon-left-arrow:before {
+  content: "\e904";
+}
+.icon-right-arrow:before {
+  content: "\e905";
+}
+.icon-down-arrow:before {
+  content: "\e906";
+}
+.icon-up-arrow:before {
+  content: "\e907";
+}
+.icon-arrow-mont:before {
+  content: "\e908";
+}
+.icon-arrow:before {
+  content: "\e909";
+}

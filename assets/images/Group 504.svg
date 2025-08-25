@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84.554" height="99.978" viewBox="0 0 84.554 99.978">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_501" data-name="Rectangle 501" width="84.554" height="99.978" transform="translate(0 0)" fill="none" stroke="#f37137" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_504" data-name="Group 504" transform="translate(0 0)">
+    <g id="Group_506" data-name="Group 506" clip-path="url(#clip-path)">
+      <path id="Path_277" data-name="Path 277" d="M46.863,56.492a2.586,2.586,0,1,1-2.586-2.586,2.586,2.586,0,0,1,2.586,2.586" stroke="#f37137" stroke-width="1"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="2.586" cy="2.586" r="2.586" transform="translate(41.691 53.906)" fill="#f37137" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_278" data-name="Path 278" d="M34.874,49.342a13.3,13.3,0,0,1,18.807,0" fill="none" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_279" data-name="Path 279" d="M28.16,42.629a22.793,22.793,0,0,1,32.234,0" fill="none" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_280" data-name="Path 280" d="M21.99,36.459a31.518,31.518,0,0,1,44.574,0" fill="none" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_281" data-name="Path 281" d="M83.054,5.475V79.906H10.786A9.283,9.283,0,0,0,1.5,89.192V13.425A11.925,11.925,0,0,1,13.425,1.5H79.079A3.975,3.975,0,0,1,83.054,5.475Z" fill="none" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_282" data-name="Path 282" d="M83.054,79.906H10.786A9.283,9.283,0,0,0,1.5,89.2a9.557,9.557,0,0,0,9.567,9.28H79.079A3.975,3.975,0,0,0,83.054,94.5V91.96" fill="none" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Line_18" data-name="Line 18" transform="translate(83.054 85.943)" fill="none" stroke="#f37137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

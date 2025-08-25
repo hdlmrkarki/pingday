@@ -1,0 +1,169 @@
+.form-control {
+  height: rem(44) !important;
+  border-radius: rem(26) !important;
+  border: 0 !important;
+  padding: rem(5) rem(30) !important;
+  color: $text !important;
+  background-color: $white;
+  font-family: $space;
+  font-weight: 500;
+
+  @media (max-width: 991px) {
+    height: rem(35) !important;
+    padding: rem(5) rem(18) !important;
+  }
+
+  &::placeholder {
+    color: $text !important;
+  }
+}
+
+
+select.form-control {
+  @extend .form-control;
+  background-position: calc(100% - 25px) 50% !important;
+  background-image: url('../images/down-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-size: rem(14);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+.custom-label {
+  font-size: 22px !important;
+  line-height: 1 !important;
+
+
+  @media (max-width: 991px) {
+    font-size: 16px !important;
+  }
+}
+
+.search-form-wrapper {
+  .form-wrapper {
+    form {
+      display: flex;
+      gap: 10px;
+
+      button {
+        width: rem(44);
+        min-width: rem(44);
+        height: rem(44);
+        border: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        color: $text;
+
+        @media (max-width: 991px) {
+          width: rem(35);
+          height: rem(35);
+          min-width: rem(35);
+        }
+      }
+
+      &:hover {
+        button {
+          background: $orange;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.background-color-orange {
+  .search-form-wrapper {
+  .form-wrapper {
+    form {
+      &:hover {
+        button {
+          background: $purple;
+        }
+      }
+    }
+  }
+}
+}
+
+.custom-control {
+  &+.custom-control {
+    margin-top: 15px;
+  }
+
+  input {
+    display: none;
+
+    &+label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding-right: 30px;
+
+      .circle {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+        border: 2px solid;
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 18px;
+        height: 18px;
+        border-radius: 5px;
+        border: 1px solid transparentize($color: $text, $amount: 0.6);
+      }
+
+      &:after {
+        width: 12px;
+        height: 12px;
+        background: $text;
+        opacity: 0;
+        border-radius: 3px;
+        right: 3px;
+      }
+    }
+
+    &:checked {
+      &+label {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.text-color {
+  &-orange {
+    .circle {
+      background: $orange;
+    }
+  }
+
+  &-blue {
+    .circle {
+      background: transparentize($color: $blue, $amount: 0.6);
+    }
+  }
+
+  &-purple {
+    .circle {
+      background: $purple;
+    }
+  }
+}
+

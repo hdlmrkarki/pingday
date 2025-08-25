@@ -1,0 +1,92 @@
+.fixed-faq-block {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    background: $white;
+    width: calc(100% - 80px);
+    transform: translate(-50%, calc(100% - 88px));
+    z-index: 2;
+    @extend .transition;
+
+    @media (max-width: 1199px) {
+        width: calc(100% - 60px);
+        transform: translate(-50%, calc(100% - 80px));
+    }
+
+    @media (max-width: 767px) {
+        width: calc(100% - 40px);
+        transform: translate(-50%, calc(100% - 74px));
+    }
+
+    .top-block {
+        padding: rem(25) 0;
+        cursor: pointer;
+        color: $orange;
+
+        .top-block-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @for $i from 1 through 6 {
+                h#{$i} {
+                    margin: 0;
+                }
+            }
+        }
+
+        &:hover {
+            color: $text;
+        }
+    }
+
+    .main-content {
+        padding: rem(30) 0 rem(40);
+        max-height: 65dvh;
+        overflow-y: auto;
+
+        .single-faq {
+            &+.single-faq {
+                margin-top: rem(25)
+            }
+
+            .question {
+                @extend .heading5;
+                font-family: $space;
+                color: $orange;
+                position: relative;
+                padding-left: rem(30);
+                margin-bottom: rem(7);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 9px;
+                    height: 9px;
+                    background-color: $orange;
+                    border-radius: 50%;
+                    top: 10px;
+                    left: 0;
+                }
+            }
+
+            .answer {
+                padding-left: rem(30);
+            }
+        }
+    }
+
+    &.maximized {
+        transform: translate(-50%, 0);
+
+        .top-block {
+            background: $orange;
+            color: $white;
+
+            .icons-block {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+}
